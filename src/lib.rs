@@ -5,54 +5,55 @@ use rand::Rng;
 use rand::SeedableRng;
 
 pub struct Random {
-    rng:StdRng,
+    rng: StdRng,
 }
 
 impl Default for Random {
     fn default() -> Self {
         let random = register("Math.random");
-        let rng:StdRng = SeedableRng::from_seed([
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
-            (255.0*call_0(UNDEFINED,random)) as u8,
+        let rng: StdRng = SeedableRng::from_seed([
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
+            (255.0 * call_0(UNDEFINED, random)) as u8,
         ]);
-        Random {
-            rng:rng,
-        }
+        Random { rng: rng }
     }
 }
 
 impl Random {
-    pub fn gen<T>(&mut self) -> T where rand::distributions::Standard:rand::distributions::Distribution<T> {
+    pub fn gen<T>(&mut self) -> T
+    where
+        rand::distributions::Standard: rand::distributions::Distribution<T>,
+    {
         self.rng.gen::<T>()
     }
 }
