@@ -11,5 +11,8 @@ readme = "README.md"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-rand = "0.7.2"
 js_ffi = "0.1"
+
+[dependencies.rand]
+version = "0.7.2"
+features = []
